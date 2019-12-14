@@ -1,0 +1,8 @@
+{% extends 'passwords/base.html' %}
+{% block content %}
+
+    <p>Password: {{required_password.password}}</p>
+    <br>
+    <button onclick="location.href={% url 'search_passwords' %}">Exit</button>
+
+{% endblock %}

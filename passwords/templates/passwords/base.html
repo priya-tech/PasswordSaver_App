@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>PasswordSaver</title>
+    <style media="screen">
+      .main {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 350px;
+  margin-left: 350px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5F9EA0;
+}
+body{
+  align='center';
+  width=50%;
+}
+
+li {
+  float: center;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #808080;
+  }
+  .btn {
+  padding: 7px 1px; /* Some padding */
+  cursor: pointer; /* Mouse pointer on hover */
+  float: right;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: black;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="{% static 'javascript/jquery-3.4.1.min.js' %}"></script>
+
+ <!-- FontAwesome CDN -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
+
+ <link href="{% static 'main.css' %}"
+ rel="stylesheet"
+ media="screen">
+
+  </head>
+  <body>
+
+    <div align='center'>
+      <h3>PasswordSaver</h3>
+    </div>
+    <div class="password" width=50%>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% block footer %}
+    <script type="text/javascript" src="{% static 'javascript/main.js' %}"></script>
+    {% endblock %}
+  </body>
+</html>
